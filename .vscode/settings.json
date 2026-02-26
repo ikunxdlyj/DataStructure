@@ -1,0 +1,16 @@
+{
+    "C_Cpp.errorSquiggles": "enabled",
+    "files.associations": {
+        "iostream": "cpp"
+    },
+    "todo-tree.tree.disableCompactFolders": true,
+    "cSpell.words": [
+        "ababaaababaa",
+        "heapify",
+        "indegree",
+        "kruskal",
+        "lmax",
+        "rmin",
+        "topo"
+    ]
+}
