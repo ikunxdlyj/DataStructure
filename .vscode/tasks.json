@@ -1,29 +1,21 @@
 {
     "tasks": [
         {
-            "type": "cppbuild",
             "label": "C/C++: g++.exe 生成活动文件",
-            "command": "D:/DevTools/msys64/ucrt64/bin/g++.exe",
+            "type": "process",
+            "command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
             "args": [
-                "-fdiagnostics-color=always",
-                "-g",
+                "-NoProfile",
+                "-File",
+                "${workspaceFolder}/.vscode/CppSingleFile.ps1",
+                "-Source",
                 "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-std=c++17",
-                "-Wall",
-                "-Wextra",
-                "-Wpedantic",
-                "-Werror=return-type",
-                "-Werror=uninitialized",
-                "-Wreturn-type",
-                "-Wuninitialized",
-                "-Wshadow",
-                "-Wconversion",
-                "-Wsign-conversion"
+                "-ProjectRoot",
+                "${workspaceFolder}",
+                "-StrictWarnings"
             ],
             "options": {
-                "cwd": "D:/DevTools/msys64/ucrt64/bin"
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
@@ -33,6 +25,28 @@
                 "isDefault": true
             },
             "detail": "调试器生成的任务。"
+        },
+        {
+            "label": "C/C++: g++.exe 生成活动文件（常规警告）",
+            "type": "process",
+            "command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "args": [
+                "-NoProfile",
+                "-File",
+                "${workspaceFolder}/.vscode/CppSingleFile.ps1",
+                "-Source",
+                "${file}",
+                "-ProjectRoot",
+                "${workspaceFolder}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "编译器: D:/DevTools/msys64/ucrt64/bin/g++.exe"
         }
     ],
     "version": "2.0.0"
